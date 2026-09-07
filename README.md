@@ -21,7 +21,8 @@ Sitio de una sola página, sin frameworks ni pasos de instalación. Todo el cont
 ```
 
 - `icono`: si la plataforma tiene un logo en [simpleicons.org](https://simpleicons.org) (por ejemplo `coursera`, `google`, `linkedin`), pon el nombre exacto (el "slug") ahí. Si no existe, pon `null` y usa `iniciales` (dos letras) en su lugar.
-- `archivo`: la ruta al PDF/imagen que subiste. Si todavía no lo tienes escaneado, pon `null` y la tarjeta mostrará "Sin archivo" en vez de un enlace roto.
+- `archivo`: la ruta al PDF/imagen que subiste a `assets/certificados/`. Úsalo cuando tengas el diploma descargado.
+- `url`: enlace de verificación en línea (Credly, Coursera, LinkedIn Learning, Skilljar, etc.). Úsalo cuando **no** tengas el PDF pero sí un link público que confirme el certificado. Si tienes ambos, `archivo` tiene prioridad y se muestra "Ver diploma"; si solo tienes `url`, se muestra "Verificar"; si no tienes ninguno, se muestra "Sin archivo".
 - Guarda, sube los cambios a GitHub (ver abajo) y listo — el contador de certificaciones en la parte de arriba se actualiza solo.
 
 ## Cómo agregar un proyecto nuevo

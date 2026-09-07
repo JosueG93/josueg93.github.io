@@ -13,9 +13,9 @@ async function loadJSON(path){
 
 function iconMarkup(icono, color, fallbackText){
   if(icono){
-    return `<img src="${ICON_BASE}/${icono}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${(fallbackText||'').slice(0,2)}',style:'font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:600;color:#fff'}))">`;
+    return `<img src="${ICON_BASE}/${icono}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${(fallbackText||'').slice(0,2)}',style:'font-family:IBM Plex Mono,monospace;font-size:11px;font-weight:700;color:#3F3F46'}))">`;
   }
-  return `<span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:#fff">${fallbackText || '·'}</span>`;
+  return `<span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;color:#3F3F46">${fallbackText || '·'}</span>`;
 }
 
 function hexSoft(hex){
@@ -146,11 +146,16 @@ function renderCertificados(list){
     return;
   }
   el.innerHTML = list.map(c => {
-    const tag = c.archivo ? 'a' : 'div';
-    const href = c.archivo ? `href="${c.archivo}" target="_blank" rel="noopener"` : '';
+    const enlace = c.archivo || c.url || null;
+    const tag = enlace ? 'a' : 'div';
+    const href = enlace ? `href="${enlace}" target="_blank" rel="noopener"` : '';
+    let etiquetaDerecha;
+    if(c.archivo) etiquetaDerecha = '<span class="cert-view mono">Ver diploma</span>';
+    else if(c.url) etiquetaDerecha = '<span class="cert-view mono">Verificar</span>';
+    else etiquetaDerecha = '<span class="cert-pending mono">Sin archivo</span>';
     return `
-    <${tag} class="cert-row ${c.archivo ? 'has-file' : ''}" ${href}>
-      <div class="cert-icon" style="background:${c.color ? hexSoft('#'+c.color) : '#E8F0FE'};">
+    <${tag} class="cert-row ${enlace ? 'has-file' : ''}" ${href}>
+      <div class="cert-icon" style="background:${c.color ? hexSoft('#'+c.color) : 'rgba(0,0,0,0.05)'};">
         ${c.icono ? iconMarkup(c.icono, c.color, c.iniciales) : iconMarkup(null, c.color, c.iniciales)}
       </div>
       <div class="cert-info">
@@ -158,8 +163,8 @@ function renderCertificados(list){
         <div class="cert-source">${c.fuente}${c.id ? ' · ID: ' + c.id : ''}</div>
       </div>
       <div class="cert-right">
-        <span class="cert-date mono">${c.fecha}</span>
-        ${c.archivo ? '<span class="cert-view mono">Ver diploma</span>' : '<span class="cert-pending mono">Sin archivo</span>'}
+        ${c.fecha ? `<span class="cert-date mono">${c.fecha}</span>` : ''}
+        ${etiquetaDerecha}
       </div>
     </${tag}>
   `;}).join('');
