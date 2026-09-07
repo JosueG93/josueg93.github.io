@@ -66,24 +66,24 @@ function renderPerfil(p){
   const contactGrid = document.getElementById('contact-grid');
   contactGrid.innerHTML = `
     <a href="mailto:${p.contacto.email}" class="contact-card">
-      <div class="contact-icon" style="background:#E8F0FE;">✉</div>
+      <div class="contact-icon" style="background:rgba(0,0,0,0.05);">✉</div>
       <div><div class="contact-label">EMAIL</div><div class="contact-value">${p.contacto.email}</div></div>
     </a>
     <a href="tel:${p.contacto.telefono}" class="contact-card">
-      <div class="contact-icon" style="background:#E8F5E9;">📞</div>
+      <div class="contact-icon" style="background:rgba(0,0,0,0.05);">☎</div>
       <div><div class="contact-label">TELÉFONO</div><div class="contact-value">${p.contacto.telefono_visible}</div></div>
     </a>
     <a href="${p.contacto.linkedin_url}" target="_blank" rel="noopener" class="contact-card">
-      <div class="contact-icon" style="background:#E8F0FE;">${iconMarkup('linkedin', '0A66C2', 'in').replace('#fff','#0A66C2')}</div>
+      <div class="contact-icon" style="background:rgba(0,0,0,0.05);">${iconMarkup('linkedin', '0A66C2', 'in').replace('#fff','#0A66C2')}</div>
       <div><div class="contact-label">LINKEDIN</div><div class="contact-value">${p.contacto.linkedin_usuario}</div></div>
     </a>
     ${p.redes_sociales?.tiktok ? `
     <a href="${p.redes_sociales.tiktok}" target="_blank" rel="noopener" class="contact-card">
-      <div class="contact-icon" style="background:#FCE8E6;">🎵</div>
+      <div class="contact-icon" style="background:rgba(0,0,0,0.05);">${iconMarkup('tiktok', '000000', 'TT')}</div>
       <div><div class="contact-label">TIKTOK</div><div class="contact-value">${p.redes_sociales.tiktok_usuario || 'gamezdata'}</div></div>
     </a>` : ''}
     <div class="contact-card">
-      <div class="contact-icon" style="background:#FEF3E2;">📍</div>
+      <div class="contact-icon" style="background:rgba(0,0,0,0.05);">◎</div>
       <div><div class="contact-label">UBICACIÓN</div><div class="contact-value">${p.ubicacion}</div></div>
     </div>
   `;
@@ -114,7 +114,7 @@ function renderHabilidades(list){
       </div>
       <div class="skill-main">
         <div class="skill-name">${s.nombre}</div>
-        <div class="skill-track"><div class="skill-fill" data-width="${s.nivel}" style="background:${s.color ? '#'+s.color : 'var(--grad-a)'};"></div></div>
+        <div class="skill-track"><div class="skill-fill" data-width="${s.nivel}" style="background:var(--grad);"></div></div>
       </div>
       <div class="skill-pct">${s.etiqueta} · ${s.nivel}%</div>
     </div>
