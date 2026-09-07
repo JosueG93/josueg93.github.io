@@ -1,8 +1,6 @@
 /* ===================================================================
-   Josue Gamez — Portafolio
-   Este archivo NO se necesita editar nunca. Lee todo desde /data/*.json
-   Para actualizar el sitio (nuevo certificado, nuevo proyecto, cambiar
-   la bio, etc.) solo se editan los archivos dentro de /data.
+   Josué Gámez — Portafolio
+   Lee todo desde /data/*.json
    =================================================================== */
 
 const ICON_BASE = 'https://cdn.simpleicons.org';
@@ -21,18 +19,22 @@ function iconMarkup(icono, color, fallbackText){
 }
 
 function hexSoft(hex){
-  return `${hex}22`; // color con transparencia para el fondo del icono
+  return `${hex}22`;
 }
 
 /* ---------- PERFIL / HERO ---------- */
 function renderPerfil(p){
   const initials = p.nombre.split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
   document.getElementById('brand-initials').textContent = initials;
-  document.getElementById('hero-avatar').textContent = initials;
+  
+  // Avatar con foto
+  const avatarEl = document.getElementById('hero-avatar');
+  avatarEl.innerHTML = `<img src="assets/avatar.jpg" alt="${p.nombre}" id="avatar-img" onerror="this.style.display='none';this.parentElement.textContent='${initials}';">`;
+  
   document.title = `${p.nombre} · ${p.titulo.split('·')[0].trim()}`;
 
   document.getElementById('hero-status').textContent = p.disponible ? 'Disponible para nuevas oportunidades' : 'No disponible actualmente';
-  document.getElementById('hero-kicker-dot').style.color = p.disponible ? 'var(--accent)' : 'var(--ink-faint)';
+  document.getElementById('hero-kicker-dot').style.color = p.disponible ? 'var(--live)' : 'var(--ink-faint)';
   document.getElementById('hero-name').textContent = p.nombre;
   document.getElementById('hero-title').textContent = p.titulo;
   document.getElementById('hero-bio').textContent = p.bio;
@@ -41,10 +43,19 @@ function renderPerfil(p){
     <span class="meta-item">📍 ${p.ubicacion}</span>
   `;
 
+  // TikTok
+  const socialHtml = p.redes_sociales?.tiktok ? `
+    <a href="${p.redes_sociales.tiktok}" target="_blank" rel="noopener" class="social-link">
+      <span>🎵</span> ${p.redes_sociales.tiktok_usuario || 'TikTok'}
+    </a>
+  ` : '';
+
   document.getElementById('hero-cta').innerHTML = `
     <a href="mailto:${p.contacto.email}" class="btn btn-primary">Escríbeme →</a>
     <a href="${p.contacto.linkedin_url}" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
   `;
+
+  document.getElementById('hero-social').innerHTML = socialHtml;
 
   document.getElementById('sidebar-foot').innerHTML = `
     <div class="status-pill"><span class="dot"></span>${p.disponible ? 'Disponible' : 'Ocupado'}</div>
@@ -54,19 +65,24 @@ function renderPerfil(p){
   const contactGrid = document.getElementById('contact-grid');
   contactGrid.innerHTML = `
     <a href="mailto:${p.contacto.email}" class="contact-card">
-      <div class="contact-icon" style="background:#FCE8E6;">✉</div>
+      <div class="contact-icon" style="background:#E8F0FE;">✉</div>
       <div><div class="contact-label">EMAIL</div><div class="contact-value">${p.contacto.email}</div></div>
     </a>
     <a href="tel:${p.contacto.telefono}" class="contact-card">
-      <div class="contact-icon" style="background:var(--accent-soft);">📞</div>
+      <div class="contact-icon" style="background:#E8F5E9;">📞</div>
       <div><div class="contact-label">TELÉFONO</div><div class="contact-value">${p.contacto.telefono_visible}</div></div>
     </a>
     <a href="${p.contacto.linkedin_url}" target="_blank" rel="noopener" class="contact-card">
       <div class="contact-icon" style="background:#E8F0FE;">${iconMarkup('linkedin', '0A66C2', 'in').replace('#fff','#0A66C2')}</div>
       <div><div class="contact-label">LINKEDIN</div><div class="contact-value">${p.contacto.linkedin_usuario}</div></div>
     </a>
+    ${p.redes_sociales?.tiktok ? `
+    <a href="${p.redes_sociales.tiktok}" target="_blank" rel="noopener" class="contact-card">
+      <div class="contact-icon" style="background:#FCE8E6;">🎵</div>
+      <div><div class="contact-label">TIKTOK</div><div class="contact-value">${p.redes_sociales.tiktok_usuario || 'gamezdata'}</div></div>
+    </a>` : ''}
     <div class="contact-card">
-      <div class="contact-icon" style="background:var(--gold-soft);">📍</div>
+      <div class="contact-icon" style="background:#FEF3E2;">📍</div>
       <div><div class="contact-label">UBICACIÓN</div><div class="contact-value">${p.ubicacion}</div></div>
     </div>
   `;
@@ -81,7 +97,7 @@ function renderPerfil(p){
 /* ---------- STATS ---------- */
 function renderStats({ anios, reduccion, certsCount, projectsCount }){
   document.getElementById('stat-strip').innerHTML = `
-    <div class="stat"><div class="stat-num mono">${anios}</div><div class="stat-label">Años de experiencia</div></div>
+    <div class="stat"><div class="stat-num mono">${anios}+</div><div class="stat-label">Años de experiencia</div></div>
     <div class="stat"><div class="stat-num mono">${reduccion}</div><div class="stat-label">Reducción tiempo de análisis</div></div>
     <div class="stat"><div class="stat-num mono">${certsCount}</div><div class="stat-label">Certificaciones</div></div>
   `;
@@ -92,12 +108,12 @@ function renderHabilidades(list){
   const el = document.getElementById('skills-table');
   el.innerHTML = list.map(s => `
     <div class="skill-row">
-      <div class="skill-icon" style="background:${s.color ? hexSoft('#'+s.color) : 'var(--accent-soft)'};">
+      <div class="skill-icon" style="background:${s.color ? hexSoft('#'+s.color) : '#E8F0FE'};">
         ${s.icono ? iconMarkup(s.icono, s.color, s.nombre) : `<span style="font-size:15px;">${s.emoji || '•'}</span>`}
       </div>
       <div class="skill-main">
         <div class="skill-name">${s.nombre}</div>
-        <div class="skill-track"><div class="skill-fill" data-width="${s.nivel}" style="background:${s.color ? '#'+s.color : 'var(--accent)'};"></div></div>
+        <div class="skill-track"><div class="skill-fill" data-width="${s.nivel}" style="background:${s.color ? '#'+s.color : 'var(--grad-a)'};"></div></div>
       </div>
       <div class="skill-pct">${s.etiqueta} · ${s.nivel}%</div>
     </div>
@@ -133,7 +149,7 @@ function renderCertificados(list){
     const href = c.archivo ? `href="${c.archivo}" target="_blank" rel="noopener"` : '';
     return `
     <${tag} class="cert-row ${c.archivo ? 'has-file' : ''}" ${href}>
-      <div class="cert-icon" style="background:${c.color ? hexSoft('#'+c.color) : 'var(--accent-soft)'};">
+      <div class="cert-icon" style="background:${c.color ? hexSoft('#'+c.color) : '#E8F0FE'};">
         ${c.icono ? iconMarkup(c.icono, c.color, c.iniciales) : iconMarkup(null, c.color, c.iniciales)}
       </div>
       <div class="cert-info">
@@ -155,7 +171,7 @@ function renderProyectos(list){
     el.innerHTML = `
       <div class="empty-state">
         <div class="empty-kicker mono">EN CONSTRUCCIÓN</div>
-        <p>Todavía no hay proyectos publicados. En cuanto termine el primero, se agrega editando <code>data/proyectos.json</code> — no requiere tocar el diseño de la página.</p>
+        <p>Todavía no hay proyectos publicados. En cuanto termine el primero, se agrega editando <code>data/proyectos.json</code>.</p>
       </div>`;
     return;
   }
@@ -175,7 +191,7 @@ function renderProyectos(list){
   `;}).join('');
 }
 
-/* ---------- animar barras de habilidades al entrar en pantalla ---------- */
+/* ---------- animar barras ---------- */
 function setupSkillBarsAnimation(){
   const bars = [...document.querySelectorAll('.skill-fill')];
   const obs = new IntersectionObserver(entries => {
@@ -189,7 +205,7 @@ function setupSkillBarsAnimation(){
   bars.forEach(b => obs.observe(b));
 }
 
-/* ---------- nav activo al hacer scroll ---------- */
+/* ---------- scroll spy ---------- */
 function setupScrollSpy(){
   const links = [...document.querySelectorAll('#sidenav a')];
   const sections = links.map(l => document.querySelector(l.getAttribute('href')));
@@ -232,9 +248,9 @@ function setupScrollSpy(){
   }catch(err){
     console.error(err);
     document.querySelector('main').innerHTML = `
-      <div style="padding:3rem 1.5rem;font-family:'IBM Plex Mono',monospace;">
+      <div style="padding:3rem 1.5rem;font-family:'JetBrains Mono',monospace;">
         <p><strong>No se pudieron cargar los datos.</strong></p>
-        <p style="color:var(--ink-soft);margin-top:8px;">Si estás viendo este archivo directamente desde tu computadora (doble clic), los navegadores bloquean la carga de los JSON por seguridad. Usa un servidor local (ver README.md) o revisa la página ya publicada en GitHub Pages.</p>
+        <p style="color:var(--ink-soft);margin-top:8px;">Usa un servidor local (python -m http.server 8000) o revisa la página en GitHub Pages.</p>
       </div>`;
   }
 })();
