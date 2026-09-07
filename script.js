@@ -51,9 +51,10 @@ function renderPerfil(p){
   ` : '';
 
   document.getElementById('hero-cta').innerHTML = `
-    <a href="mailto:${p.contacto.email}" class="btn btn-primary">Escríbeme →</a>
-    <a href="${p.contacto.linkedin_url}" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
-  `;
+  <a href="mailto:${p.contacto.email}" class="btn btn-primary">Escríbeme →</a>
+  <a href="${p.contacto.linkedin_url}" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+  ${p.redes_sociales?.tiktok_url ? `<a href="${p.redes_sociales.tiktok_url}" target="_blank" rel="noopener" class="btn btn-ghost btn-tiktok">TikTok</a>` : ''}
+`;
 
   document.getElementById('hero-social').innerHTML = socialHtml;
 
