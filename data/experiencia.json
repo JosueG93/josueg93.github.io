@@ -1,33 +1,41 @@
 [
   {
     "empresa": "Deprati S.A.",
-    "rol": "Analista de Compensaciones y People Analytics · RRHH",
-    "fecha": "Jun 2025 – Actual",
-    "descripcion": "Desarrollo de modelos de People Analytics para análisis descriptivo y predictivo en RRHH. Control de presupuestos y análisis de sueldos de toda la empresa usando Power BI, DAX, Power Query, Databricks, Python y SQL.",
+    "rol": "Analista de Compensaciones y Beneficios — RR. HH.",
+    "fecha": "Jun 2025 — Actual",
+    "descripcion": "Diseño y desarrollo de modelos de People Analytics. Análisis descriptivo y predictivo de sueldos y remuneraciones. Control de presupuestos. Desarrollo de pipelines en Databricks y automatización CRM con Power Automate integrado a dashboards en Power BI.",
     "actual": true,
-    "insignia": "Posición actual"
+    "insignia": "Actual"
   },
   {
     "empresa": "Kuantica Consulting Services",
     "rol": "Líder de Ciencia de Datos y Visualizaciones",
-    "fecha": "Feb 2024 – Jun 2025",
-    "descripcion": "Lideré el equipo de análisis de datos y desarrollo de proyectos. Desarrollé dashboards en Power BI que redujeron en un 30% el tiempo de análisis para gerencias y mejoraron la visibilidad de KPIs clave.",
+    "fecha": "Feb 2024 — Jun 2025",
+    "descripcion": "Lideré equipo de análisis de datos. Desarrollé dashboards en Power BI que redujeron en 30% el tiempo de análisis para gerencias. Responsable del modelado de datos y colaboración transversal con distintos departamentos.",
     "actual": false,
-    "insignia": "-30% tiempo de análisis"
+    "insignia": null
   },
   {
     "empresa": "American Call Center",
     "rol": "Líder Junior de Servicio al Cliente y Ventas",
-    "fecha": "Oct 2019 – Feb 2024",
-    "descripcion": "Supervisión y manejo de personal, cumplimiento de metas de campañas, gestión de reportes y aplicativos de servicio al cliente.",
+    "fecha": "Oct 2019 — Feb 2024",
+    "descripcion": "Supervisión de equipos operativos. Desde 2021, elaboración de reportes en Excel y Power BI para gerencia, análisis de KPIs de campañas (ventas, calidad, productividad).",
+    "actual": false,
+    "insignia": null
+  },
+  {
+    "empresa": "American Call Center",
+    "rol": "Asesor Telefónico de Servicio al Cliente y Ventas",
+    "fecha": "Sep 2015 — Sep 2019",
+    "descripcion": "Atención al cliente en campañas 611 y Claro Fijo. Gestión de CRM y elaboración de reportes operativos de back office.",
     "actual": false,
     "insignia": null
   },
   {
     "empresa": "Borsea S.A.",
     "rol": "Asistente Administrativo",
-    "fecha": "Oct 2014 – Ene 2015",
-    "descripcion": "Documentación, control de nómina y validación de productos en bodega.",
+    "fecha": "Oct 2014 — Ene 2015",
+    "descripcion": "Gestión de documentación, control de nómina y validación de productos en bodega.",
     "actual": false,
     "insignia": null
   }
