@@ -1,0 +1,77 @@
+# Portafolio — Josue Gamez
+
+Sitio de una sola página, sin frameworks ni pasos de instalación. Todo el contenido vive en archivos `.json` dentro de `/data`, así que actualizar el portafolio nunca requiere tocar HTML ni CSS.
+
+## Cómo agregar un certificado nuevo
+
+1. Sube el PDF o la imagen del diploma a la carpeta `assets/certificados/` (por ejemplo `power-bi-avanzado.pdf`).
+2. Abre `data/certificados.json` y agrega un bloque nuevo al inicio del arreglo:
+
+```json
+{
+  "nombre": "Nombre del curso o certificación",
+  "fuente": "Plataforma o institución",
+  "fecha": "Mes Año",
+  "id": "ID del certificado (o null si no tiene)",
+  "icono": "slug-de-simpleicons-o-null",
+  "iniciales": "AB",
+  "color": "2563EB",
+  "archivo": "assets/certificados/power-bi-avanzado.pdf"
+}
+```
+
+- `icono`: si la plataforma tiene un logo en [simpleicons.org](https://simpleicons.org) (por ejemplo `coursera`, `google`, `linkedin`), pon el nombre exacto (el "slug") ahí. Si no existe, pon `null` y usa `iniciales` (dos letras) en su lugar.
+- `archivo`: la ruta al PDF/imagen que subiste a `assets/certificados/`. Úsalo cuando tengas el diploma descargado.
+- `url`: enlace de verificación en línea (Credly, Coursera, LinkedIn Learning, Skilljar, etc.). Úsalo cuando **no** tengas el PDF pero sí un link público que confirme el certificado. Si tienes ambos, `archivo` tiene prioridad y se muestra "Ver diploma"; si solo tienes `url`, se muestra "Verificar"; si no tienes ninguno, se muestra "Sin archivo".
+- Guarda, sube los cambios a GitHub (ver abajo) y listo — el contador de certificaciones en la parte de arriba se actualiza solo.
+
+## Cómo agregar un proyecto nuevo
+
+1. (Opcional) Sube capturas o archivos a `assets/proyectos/`.
+2. Abre `data/proyectos.json` (empieza vacío: `[]`) y agrega:
+
+```json
+{
+  "titulo": "Nombre del proyecto",
+  "estado": "live",
+  "descripcion": "Qué hace el proyecto y qué problema resuelve.",
+  "tags": ["Power BI", "Python", "SQL"],
+  "link": "https://github.com/tu-usuario/tu-repo"
+}
+```
+
+- `estado` acepta: `live` (en producción), `wip` (en desarrollo) o `soon` (próximamente).
+- `link` puede ser un repositorio de GitHub, un Power BI publicado en la web, o cualquier URL. Si no tienes uno todavía, pon `null`.
+
+## Cómo editar tu información general
+
+Todo el texto del encabezado, la bio, el correo, teléfono y LinkedIn está en `data/perfil.json`.
+
+## Estructura del proyecto
+
+```
+├── index.html
+├── style.css
+├── script.js
+├── data/
+│ ├── perfil.json → información personal
+│ ├── habilidades.json → habilidades técnicas
+│ ├── experiencia.json → experiencia laboral
+│ ├── certificados.json → diplomas y certificaciones
+│ └── proyectos.json → proyectos
+├── assets/
+│ ├── avatar.jpg → tu foto
+│ ├── certificados/ → PDFs de diplomas
+│ └── proyectos/ → capturas de proyectos
+└── README.md
+```
+
+## Ver el sitio en tu computadora antes de publicarlo
+
+Los navegadores bloquean la carga de archivos `.json` cuando abres `index.html` con doble clic. Para probarlo localmente, abre una terminal en esta carpeta y corre:
+
+```bash
+python3 -m http.server 8000
+```
+
+Luego abre `http://localhost:8000` en tu navegador. (Esto **no** es necesario para publicarlo en GitHub Pages — ahí funciona directo).
