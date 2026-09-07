@@ -1,17 +1,12 @@
 [
   { "nombre": "Power BI", "etiqueta": "Avanzado", "icono": "powerbi", "color": "F2C811" },
-  { "nombre": "DAX / Power Query", "etiqueta": "Avanzado", "icono": "powerbi", "color": "F2C811" },
   { "nombre": "SQL", "etiqueta": "Avanzado", "icono": "sqlite", "color": "003B57" },
-  { "nombre": "Excel / Power Pivot", "etiqueta": "Avanzado", "icono": "microsoft-excel", "color": "217346" },
-  { "nombre": "Análisis y modelado de datos", "etiqueta": "Avanzado", "icono": null, "emoji": "📊" },
-  { "nombre": "Liderazgo de equipos", "etiqueta": "Avanzado", "icono": null, "emoji": "👥" },
-  { "nombre": "Comunicación con stakeholders", "etiqueta": "Avanzado", "icono": null, "emoji": "🗣️" },
   { "nombre": "Python", "etiqueta": "Intermedio", "icono": "python", "color": "3776AB" },
+  { "nombre": "Excel / Power Pivot", "etiqueta": "Avanzado", "icono": "microsoft-excel", "color": "217346" },
   { "nombre": "Databricks", "etiqueta": "Intermedio", "icono": "databricks", "color": "FF3621" },
   { "nombre": "Power Automate / Power Apps", "etiqueta": "Intermedio", "icono": "power-automate", "color": "0066CC" },
-  { "nombre": "Estadística y análisis predictivo", "etiqueta": "Intermedio", "icono": null, "emoji": "🧮" },
+  { "nombre": "DAX / Power Query", "etiqueta": "Avanzado", "icono": "powerbi", "color": "F2C811" },
+  { "nombre": "Tableau", "etiqueta": "Básico", "icono": "tableau", "color": "E97627" },
   { "nombre": "Machine Learning / ETL", "etiqueta": "Intermedio", "icono": "scikitlearn", "color": "F7931E" },
-  { "nombre": "Metodologías ágiles (Scrum)", "etiqueta": "Intermedio", "icono": null, "emoji": "🔄" },
-  { "nombre": "Cloud (AWS: Redshift, Glue, QuickSight)", "etiqueta": "Básico", "icono": "amazonaws", "color": "232F3E" },
-  { "nombre": "Tableau", "etiqueta": "Básico", "icono": "tableau", "color": "E97627" }
+  { "nombre": "Liderazgo de equipos / Scrum", "etiqueta": "Avanzado", "icono": null, "emoji": "👥" }
 ]
