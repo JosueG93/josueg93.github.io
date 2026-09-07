@@ -28,6 +28,7 @@ function hexSoft(hex){
 function renderPerfil(p){
   const initials = p.nombre.split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
   document.getElementById('brand-initials').textContent = initials;
+  document.getElementById('hero-avatar').textContent = initials;
   document.title = `${p.nombre} · ${p.titulo.split('·')[0].trim()}`;
 
   document.getElementById('hero-status').textContent = p.disponible ? 'Disponible para nuevas oportunidades' : 'No disponible actualmente';
@@ -96,7 +97,7 @@ function renderHabilidades(list){
       </div>
       <div class="skill-main">
         <div class="skill-name">${s.nombre}</div>
-        <div class="skill-track"><div class="skill-fill" style="width:${s.nivel}%; background:${s.color ? '#'+s.color : 'var(--accent)'};"></div></div>
+        <div class="skill-track"><div class="skill-fill" data-width="${s.nivel}" style="background:${s.color ? '#'+s.color : 'var(--accent)'};"></div></div>
       </div>
       <div class="skill-pct">${s.etiqueta} · ${s.nivel}%</div>
     </div>
@@ -174,6 +175,20 @@ function renderProyectos(list){
   `;}).join('');
 }
 
+/* ---------- animar barras de habilidades al entrar en pantalla ---------- */
+function setupSkillBarsAnimation(){
+  const bars = [...document.querySelectorAll('.skill-fill')];
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.width = entry.target.dataset.width + '%';
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  bars.forEach(b => obs.observe(b));
+}
+
 /* ---------- nav activo al hacer scroll ---------- */
 function setupScrollSpy(){
   const links = [...document.querySelectorAll('#sidenav a')];
@@ -208,6 +223,7 @@ function setupScrollSpy(){
     renderCertificados(certificados);
     renderProyectos(proyectos);
     setupScrollSpy();
+    setupSkillBarsAnimation();
 
     document.querySelectorAll('main > section, .stat-strip').forEach((el,i)=>{
       el.classList.add('reveal');
