@@ -1,0 +1,96 @@
+[
+  {
+    "nombre": "Certificación de Google Analytics",
+    "fuente": "Google Skillshop",
+    "fecha": "Dic 2025",
+    "id": null,
+    "icono": "googleanalytics",
+    "color": "E37400",
+    "archivo": null
+  },
+  {
+    "nombre": "Fundamentos de People Analytics",
+    "fuente": "Ubits",
+    "fecha": "Dic 2025",
+    "id": null,
+    "icono": null,
+    "iniciales": "UB",
+    "color": "FF6B35",
+    "archivo": null
+  },
+  {
+    "nombre": "Especialización en Data Analytics",
+    "fuente": "Netzun",
+    "fecha": "Ene 2025",
+    "id": "E1B03DBE",
+    "icono": null,
+    "iniciales": "NZ",
+    "color": "6D28D9",
+    "archivo": null
+  },
+  {
+    "nombre": "Fundamentos de modelado tabular Power BI (PL-300)",
+    "fuente": "LinkedIn Learning",
+    "fecha": "Ene 2025",
+    "id": null,
+    "icono": "linkedin",
+    "color": "0A66C2",
+    "archivo": null
+  },
+  {
+    "nombre": "Getting Started in Google Analytics",
+    "fuente": "Coursera",
+    "fecha": "Ene 2025",
+    "id": "S2EPA1MPBYSJ",
+    "icono": "coursera",
+    "color": "0056D3",
+    "archivo": null
+  },
+  {
+    "nombre": "Business Analysis & Process Management",
+    "fuente": "Coursera",
+    "fecha": "Dic 2024",
+    "id": "TTEWDH9BC89G",
+    "icono": "coursera",
+    "color": "0056D3",
+    "archivo": null
+  },
+  {
+    "nombre": "Business Analytics en Big Data",
+    "fuente": "Netzun",
+    "fecha": "Nov 2024",
+    "id": "9AB7194EI",
+    "icono": null,
+    "iniciales": "NZ",
+    "color": "6D28D9",
+    "archivo": null
+  },
+  {
+    "nombre": "Experto en Power BI",
+    "fuente": "CapaciTES – Tecnológico Espíritu Santo",
+    "fecha": "Ago 2023",
+    "id": "9207",
+    "icono": null,
+    "iniciales": "CT",
+    "color": "00B4D8",
+    "archivo": null
+  },
+  {
+    "nombre": "Curso Completo de Power BI Desktop",
+    "fuente": "Coursera",
+    "fecha": "Jun 2023",
+    "id": "EE3YDE34ZJPF",
+    "icono": "coursera",
+    "color": "0056D3",
+    "archivo": null
+  },
+  {
+    "nombre": "Introduction to Data Analysis using Microsoft Excel",
+    "fuente": "Coursera",
+    "fecha": "Ene 2025",
+    "id": "UZ0UHADXSJF1",
+    "icono": "coursera",
+    "color": "0056D3",
+    "archivo": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "empresa": "Deprati S.A.",
+    "rol": "Analista de Compensaciones y People Analytics · RRHH",
+    "fecha": "Jun 2025 – Actual",
+    "descripcion": "Desarrollo de modelos de People Analytics para análisis descriptivo y predictivo en RRHH. Control de presupuestos y análisis de sueldos de toda la empresa usando Power BI, DAX, Power Query, Databricks, Python y SQL.",
+    "actual": true,
+    "insignia": "Posición actual"
+  },
+  {
+    "empresa": "Kuantica Consulting Services",
+    "rol": "Líder de Ciencia de Datos y Visualizaciones",
+    "fecha": "Feb 2024 – Jun 2025",
+    "descripcion": "Lideré el equipo de análisis de datos y desarrollo de proyectos. Desarrollé dashboards en Power BI que redujeron en un 30% el tiempo de análisis para gerencias y mejoraron la visibilidad de KPIs clave.",
+    "actual": false,
+    "insignia": "-30% tiempo de análisis"
+  },
+  {
+    "empresa": "American Call Center",
+    "rol": "Líder Junior de Servicio al Cliente y Ventas",
+    "fecha": "Oct 2019 – Feb 2024",
+    "descripcion": "Supervisión y manejo de personal, cumplimiento de metas de campañas, gestión de reportes y aplicativos de servicio al cliente.",
+    "actual": false,
+    "insignia": null
+  },
+  {
+    "empresa": "Borsea S.A.",
+    "rol": "Asistente Administrativo",
+    "fecha": "Oct 2014 – Ene 2015",
+    "descripcion": "Documentación, control de nómina y validación de productos en bodega.",
+    "actual": false,
+    "insignia": null
+  }
+]

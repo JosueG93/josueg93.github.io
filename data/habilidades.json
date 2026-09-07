@@ -1,0 +1,10 @@
+[
+  { "nombre": "Power BI + DAX", "icono": "powerbi", "color": "F2C811", "nivel": 95, "etiqueta": "Avanzado" },
+  { "nombre": "SQL Server", "icono": "microsoftsqlserver", "color": "CC2927", "nivel": 93, "etiqueta": "Avanzado" },
+  { "nombre": "Excel + Power Query", "icono": "microsoftexcel", "color": "217346", "nivel": 95, "etiqueta": "Avanzado" },
+  { "nombre": "Python (Pandas, NumPy)", "icono": "python", "color": "3776AB", "nivel": 65, "etiqueta": "Intermedio" },
+  { "nombre": "Tableau", "icono": "tableau", "color": "E97627", "nivel": 55, "etiqueta": "Básico/Intermedio" },
+  { "nombre": "Databricks", "icono": "databricks", "color": "FF3621", "nivel": 40, "etiqueta": "Básico" },
+  { "nombre": "Machine Learning", "icono": "scikitlearn", "color": "F7931E", "nivel": 45, "etiqueta": "Básico/Intermedio" },
+  { "nombre": "Scrum / Agile", "icono": null, "emoji": "🔄", "color": "009FDA", "nivel": 50, "etiqueta": "Intermedio" }
+]

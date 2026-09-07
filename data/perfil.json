@@ -1,1 +1,16 @@
-
+{
+  "nombre": "Josue Santiago Gamez Cerezo",
+  "titulo": "Analista de Datos Senior · BI & People Analytics",
+  "bio": "Transformo datos en decisiones estratégicas. Especialista en Business Intelligence, automatización de reportes y análisis predictivo con más de 5 años de experiencia en sectores retail y consultoría.",
+  "ubicacion": "Guayaquil, Ecuador",
+  "disponible": true,
+  "anios_experiencia": "5+",
+  "reduccion_tiempo": "30%",
+  "contacto": {
+    "email": "josueg.9324@gmail.com",
+    "telefono": "+593996179886",
+    "telefono_visible": "+593 996 179 886",
+    "linkedin_url": "https://www.linkedin.com/in/josuegamezc/",
+    "linkedin_usuario": "josuegamezc"
+  }
+}
