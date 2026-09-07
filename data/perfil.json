@@ -1,0 +1,20 @@
+{
+  "nombre": "Josué Santiago Gámez Cerezo",
+  "titulo": "Analista de Datos Senior · Business Intelligence & People Analytics",
+  "bio": "Analista de datos con cerca de 5 años de experiencia generando reportería y análisis de KPIs para gerencia. Especializado en Power BI, SQL y Python para análisis descriptivo y predictivo, con historial comprobado de reducción de tiempos de análisis y mejora de visibilidad de KPIs para gerencias.",
+  "ubicacion": "Ecuador",
+  "disponible": true,
+  "anios_experiencia": 5,
+  "reduccion_tiempo": "30%",
+  "contacto": {
+    "email": "josueg.9324@gmail.com",
+    "telefono": "0996179886",
+    "telefono_visible": "+593 99 617 9886",
+    "linkedin_url": "https://www.linkedin.com/in/josuegamezc/",
+    "linkedin_usuario": "josuegamezc"
+  },
+  "redes_sociales": {
+    "tiktok_url": "https://www.tiktok.com/@gamezdata",
+    "tiktok_usuario": "@gamezdata"
+  }
+}
