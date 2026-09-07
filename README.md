@@ -49,18 +49,20 @@ Todo el texto del encabezado, la bio, el correo, teléfono y LinkedIn está en `
 ## Estructura del proyecto
 
 ```
-├── index.html              → estructura de la página (no se edita casi nunca)
-├── style.css                → estilos visuales
-├── script.js                 → lee los .json y arma la página (no se edita)
+├── index.html
+├── style.css
+├── script.js
 ├── data/
-│   ├── perfil.json           → tu información personal
-│   ├── habilidades.json      → herramientas que dominas
-│   ├── experiencia.json      → historial laboral
-│   ├── certificados.json     → diplomas y cursos ← se edita seguido
-│   └── proyectos.json        → portafolio de proyectos ← se edita seguido
-└── assets/
-    ├── certificados/         → PDFs/imágenes de tus diplomas
-    └── proyectos/             → capturas de tus proyectos
+│ ├── perfil.json → información personal
+│ ├── habilidades.json → habilidades técnicas
+│ ├── experiencia.json → experiencia laboral
+│ ├── certificados.json → diplomas y certificaciones
+│ └── proyectos.json → proyectos
+├── assets/
+│ ├── avatar.jpg → tu foto
+│ ├── certificados/ → PDFs de diplomas
+│ └── proyectos/ → capturas de proyectos
+└── README.md
 ```
 
 ## Ver el sitio en tu computadora antes de publicarlo
