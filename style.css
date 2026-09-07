@@ -328,3 +328,37 @@ footer{ padding:2.5rem 0; text-align:left; font-family:'JetBrains Mono', monospa
 /* skeleton */
 .skeleton-row{ height:60px; border-radius:var(--radius); background:linear-gradient(90deg, #f0f0f5 25%, #e8e8ef 37%, #f0f0f5 63%); background-size:400% 100%; animation:shimmer 1.4s ease infinite; margin-bottom:10px; border:1px solid var(--glass-border); }
 @keyframes shimmer{ 0%{ background-position:100% 0; } 100%{ background-position:0 0; } }
+
+/* ---------- Botón TikTok ---------- */
+.btn-tiktok {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border-color: var(--glass-border);
+  color: var(--ink);
+}
+
+.btn-tiktok::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M448 209.9a210.1 210.1 0 0 1-122.8-39.3v178.8A162.6 162.6 0 1 1 185 188.3v89.9a74.6 74.6 0 1 0 52.3 71.2V0h88.2a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z' fill='currentColor'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+.btn-tiktok:hover {
+  border-color: #FF0050;
+  color: #FF0050;
+}
+.btn-tiktok:hover::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M448 209.9a210.1 210.1 0 0 1-122.8-39.3v178.8A162.6 162.6 0 1 1 185 188.3v89.9a74.6 74.6 0 1 0 52.3 71.2V0h88.2a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z' fill='%23FF0050'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}
+
+/* Versión oscura del logo para modo claro */
+.btn-tiktok::before {
+  filter: none;
+}
