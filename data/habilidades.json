@@ -1,10 +1,12 @@
 [
-  { "nombre": "Power BI + DAX", "icono": "powerbi", "color": "F2C811", "nivel": 95, "etiqueta": "Avanzado" },
-  { "nombre": "SQL Server", "icono": "microsoftsqlserver", "color": "CC2927", "nivel": 93, "etiqueta": "Avanzado" },
-  { "nombre": "Excel + Power Query", "icono": "microsoftexcel", "color": "217346", "nivel": 95, "etiqueta": "Avanzado" },
-  { "nombre": "Python (Pandas, NumPy)", "icono": "python", "color": "3776AB", "nivel": 65, "etiqueta": "Intermedio" },
-  { "nombre": "Tableau", "icono": "tableau", "color": "E97627", "nivel": 55, "etiqueta": "Básico/Intermedio" },
-  { "nombre": "Databricks", "icono": "databricks", "color": "FF3621", "nivel": 40, "etiqueta": "Básico" },
-  { "nombre": "Machine Learning", "icono": "scikitlearn", "color": "F7931E", "nivel": 45, "etiqueta": "Básico/Intermedio" },
-  { "nombre": "Scrum / Agile", "icono": null, "emoji": "🔄", "color": "009FDA", "nivel": 50, "etiqueta": "Intermedio" }
+  { "nombre": "Power BI", "nivel": 95, "etiqueta": "Avanzado", "icono": "powerbi", "color": "F2C811" },
+  { "nombre": "SQL", "nivel": 90, "etiqueta": "Avanzado", "icono": "sqlite", "color": "003B57" },
+  { "nombre": "Python", "nivel": 75, "etiqueta": "Intermedio", "icono": "python", "color": "3776AB" },
+  { "nombre": "Excel / Power Pivot", "nivel": 90, "etiqueta": "Avanzado", "icono": "microsoft-excel", "color": "217346" },
+  { "nombre": "Databricks", "nivel": 70, "etiqueta": "Intermedio", "icono": "databricks", "color": "FF3621" },
+  { "nombre": "Power Automate / Power Apps", "nivel": 70, "etiqueta": "Intermedio", "icono": "power-automate", "color": "0066CC" },
+  { "nombre": "DAX / Power Query", "nivel": 85, "etiqueta": "Avanzado", "icono": "powerbi", "color": "F2C811" },
+  { "nombre": "Tableau", "nivel": 60, "etiqueta": "Básico", "icono": "tableau", "color": "E97627" },
+  { "nombre": "Machine Learning / ETL", "nivel": 70, "etiqueta": "Intermedio", "icono": "scikitlearn", "color": "F7931E" },
+  { "nombre": "Liderazgo de equipos / Scrum", "nivel": 80, "etiqueta": "Avanzado", "icono": null, "emoji": "👥" }
 ]
